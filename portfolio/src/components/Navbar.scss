@@ -1,0 +1,26 @@
+@use "../App.scss";
+
+$bg-color: rgba(17, 26, 44, 0.8);
+$text-color: rgb(242, 242, 242);
+
+.navbar {
+	min-width: max-content;
+	position: fixed;
+	width: max-content;
+	text-align: center;
+	padding: 5px;
+	top: 10px;
+	background-color: $bg-color;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 24px;
+	border-radius: 15px;
+	padding: 5px;
+	backdrop-filter: blur(2px);
+
+	a {
+		margin: 0 10px;
+		text-decoration: none;
+		color: $text-color;
+	}
+}

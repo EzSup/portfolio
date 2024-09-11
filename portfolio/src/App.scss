@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap");
+
+$bg-color: rgb(17, 24, 39);
+$bg-color-blurred: rgba(17, 26, 44, 0.8);
+$text-color: rgb(242, 242, 242);
+$btn-bg-color: rgba(255, 255, 255, 0.1);
+$btn-hovered-bg-color: rgba(255, 255, 255, 0.1);
+
+@mixin aligncontentcenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+* {
+	scroll-behavior: smooth;
+}
+
+body {
+	@include aligncontentcenter();
+	margin: 0;
+	font-family: "SUSE", sans-serif;
+	background-color: $bg-color;
+	color: $text-color;
+
+	a {
+		text-decoration: none;
+		color: $text-color;
+	}
+
+	h2 {
+		font-size: 32px;
+	}
+	h3 {
+		font-size: 24px;
+	}
+	h4 {
+		font-size: 20px;
+	}
+}
+
+section {
+	max-width: 52rem;
+	text-align: center;
+}
+#home {
+	margin-top: 70px;
+
+	h1 {
+		font-weight: 400;
+		font-style: italic;
+	}
+
+	button {
+		background-color: $btn-bg-color;
+		color: $text-color;
+		border: none;
+		border-radius: 30px;
+		padding: 15px;
+		margin: 10px;
+		font-size: 16px;
+		transition: all 0.2s;
+		min-width: 50px;
+	}
+	button:hover {
+		transform: scale(1.1);
+		background-color: $btn-hovered-bg-color;
+	}
+}
+#about {
+	p {
+		font-size: 24px;
+		line-height: 1.4em;
+	}
+}
+
+.image-container {
+	@include aligncontentcenter();
+}
+
+.self-image {
+	background-color: $text-color;
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+}

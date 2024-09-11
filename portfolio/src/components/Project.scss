@@ -1,0 +1,54 @@
+@use "../App.scss";
+$card-bg-color: rgba(255, 255, 255, 0.1);
+$card-bg-color-hovered: rgba(255, 255, 255, 0.2);
+
+.card {
+	background-color: $card-bg-color;
+	border-radius: 10px;
+	padding: 16px;
+	text-align: start;
+	display: grid;
+	h2 {
+		margin: auto 0 auto 0;
+	}
+	p {
+		font-size: 20px;
+	}
+	margin: 30px 0;
+
+	// opacity: 0; /* Start as invisible */
+	// transform: translateY(50px); /* Move cards downward initially */
+	// transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+// .card.show {
+// 	opacity: 1;
+// 	transform: translateY(0); /* Move into view */
+// }
+.card:hover {
+	background-color: $card-bg-color-hovered;
+}
+
+.card-stack {
+	display: inline-flex;
+}
+
+.tech,
+.card-link {
+	width: max-content;
+	padding: 5px 10px;
+	border-radius: 15px;
+	margin: 4px;
+	svg {
+		vertical-align: middle;
+		margin: auto 4px 3px 0px;
+	}
+}
+
+.tech {
+	background-color: #000000b3;
+}
+
+.card-link:hover {
+	background-color: $card-bg-color-hovered;
+}
