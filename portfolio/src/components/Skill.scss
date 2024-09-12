@@ -1,2 +1,11 @@
+@use "./Project.scss";
+$card-bg-color: rgba(0, 0, 0, 0.2);
+
 .skill-card {
+	width: max-content;
+	display: inline-flex !important;
+	margin: 5px 5px !important;
+	padding: 10px !important;
+	font-size: 20px;
+	border-radius: 10px;
 }

@@ -1,10 +1,13 @@
 @use "../App.scss";
 
-$bg-color: rgba(17, 26, 44, 0.8);
-$text-color: rgb(242, 242, 242);
+// $bg-color: rgba(17, 26, 44, 0.8);
+// $text-color: rgb(242, 242, 242);
+
+$bg-color: rgba(255, 255, 255, 0.8); // Світлий, напівпрозорий фон для навбара
+$text-color: rgb(34, 34, 34); // Темний текст для чіткого контрасту
+$bg-color-selected: rgba(0, 0, 0, 0.2);
 
 .navbar {
-	min-width: max-content;
 	position: fixed;
 	width: max-content;
 	text-align: center;
@@ -15,12 +18,25 @@ $text-color: rgb(242, 242, 242);
 	transform: translateX(-50%);
 	font-size: 24px;
 	border-radius: 15px;
-	padding: 5px;
+	padding: 5px 3px;
 	backdrop-filter: blur(2px);
 
 	a {
-		margin: 0 10px;
+		margin: 0 4px;
 		text-decoration: none;
 		color: $text-color;
+		padding: 0px 8px;
+		border-radius: 10px;
+		transition: all 0.3s ease-in-out;
+	}
+
+	a.active {
+		background-color: $bg-color-selected;
+	}
+}
+
+@media screen and (max-width: 540px) {
+	.navbar {
+		font-size: 20px;
 	}
 }

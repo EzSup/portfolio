@@ -1,10 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap");
 
-$bg-color: rgb(17, 24, 39);
-$bg-color-blurred: rgba(17, 26, 44, 0.8);
-$text-color: rgb(242, 242, 242);
-$btn-bg-color: rgba(255, 255, 255, 0.1);
-$btn-hovered-bg-color: rgba(255, 255, 255, 0.1);
+// $bg-color: rgb(17, 24, 39);
+// $bg-color-blurred: rgba(17, 26, 44, 0.8);
+// $text-color: rgb(242, 242, 242);
+// $btn-bg-color: rgba(255, 255, 255, 0.1);
+// $btn-hovered-bg-color: rgba(255, 255, 255, 0.1);
+$bg-color: #eeeeee; // Світлий фон для всієї сторінки
+$bg-color-blurred: rgba(245, 245, 245, 0.8); // Затуманений фон
+$text-color: rgb(40, 40, 40); // Темний текст для контрасту на світлому фоні
+$btn-bg-color: rgba(0, 0, 0, 0.1); // Легка напівпрозора темна кнопка
+$btn-hovered-bg-color: rgba(
+	0,
+	0,
+	0,
+	0.2
+); // Темніший колір для кнопки при наведенні
 
 @mixin aligncontentcenter {
 	display: flex;
@@ -42,31 +52,33 @@ body {
 section {
 	max-width: 52rem;
 	text-align: center;
+	margin-top: 100px;
 }
 #home {
-	margin-top: 70px;
-
 	h1 {
 		font-weight: 400;
 		font-style: italic;
 	}
-
-	button {
-		background-color: $btn-bg-color;
-		color: $text-color;
-		border: none;
-		border-radius: 30px;
-		padding: 15px;
-		margin: 10px;
-		font-size: 16px;
-		transition: all 0.2s;
-		min-width: 50px;
-	}
-	button:hover {
-		transform: scale(1.1);
-		background-color: $btn-hovered-bg-color;
-	}
 }
+
+button {
+	background-color: $btn-bg-color;
+	font-weight: 500;
+	color: $text-color;
+	border: none;
+	border-radius: 30px;
+	padding: 15px;
+	margin: 10px;
+	font-size: 16px;
+	transition: all 0.2s;
+	min-width: 50px;
+}
+
+button:hover {
+	transform: scale(1.1);
+	background-color: $btn-hovered-bg-color;
+}
+
 #about {
 	p {
 		font-size: 24px;
@@ -83,4 +95,11 @@ section {
 	width: 160px;
 	height: 160px;
 	border-radius: 50%;
+	margin: 50px;
+}
+
+@media screen and (max-width: 840px) {
+	section {
+		max-width: 90vw;
+	}
 }

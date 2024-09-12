@@ -1,6 +1,11 @@
 @use "../App.scss";
-$card-bg-color: rgba(255, 255, 255, 0.1);
-$card-bg-color-hovered: rgba(255, 255, 255, 0.2);
+// $card-bg-color: rgba(255, 255, 255, 0.1);
+// $card-bg-color-hovered: rgba(255, 255, 255, 0.2);
+
+$card-bg-color: rgba(0, 0, 0, 0.1);
+$card-bg-color-hovered: rgba(0, 0, 0, 0.2);
+$tech-text-color: rgb(236, 236, 236);
+$tech-bg-color: rgba(0, 0, 0, 0.7);
 
 .card {
 	background-color: $card-bg-color;
@@ -46,7 +51,8 @@ $card-bg-color-hovered: rgba(255, 255, 255, 0.2);
 }
 
 .tech {
-	background-color: #000000b3;
+	color: $tech-text-color;
+	background-color: $tech-bg-color;
 }
 
 .card-link:hover {
